@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { DownOutlined, PlusOutlined } from '@ant-design/icons';
+import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import ProTable, {
     ActionType,
     enUSIntl,
@@ -152,7 +153,7 @@ const TableList: React.FC<{}> = () => {
     ];
 
     return (
-        <>
+        <PageHeaderWrapper>
             <IntlProvider value={enUSIntl}>
                 <ProTable<TableListItem>
                     headerTitle="Inquiry form"
@@ -270,7 +271,7 @@ const TableList: React.FC<{}> = () => {
                     />
                 ) : null}
             </IntlProvider>
-        </>
+        </PageHeaderWrapper>
     );
 };
 

@@ -7,7 +7,6 @@
 import ProLayout, {
     BasicLayoutProps as ProLayoutProps,
     MenuDataItem,
-    PageHeaderWrapper,
 } from '@ant-design/pro-layout';
 import { MessageDescriptor, Route } from '@ant-design/pro-layout/lib/typings';
 import { useLocation } from '@reach/router';
@@ -148,11 +147,9 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
             {...gatsbySettings}
             route={routes}
         >
-            <PageHeaderWrapper>
-                <Authorized authority={currentRoute.authority}>
-                    {children}
-                </Authorized>
-            </PageHeaderWrapper>
+            <Authorized authority={currentRoute.authority}>
+                {children}
+            </Authorized>
         </ProLayout>
     );
 };
