@@ -13,7 +13,6 @@ import { CurrentUser, useCurrentUser } from '../../../hooks/useCurrentUser';
 import styles from './index.module.less';
 
 export interface AvatarDropdownProps {
-    // TODO: Provide currentUser
     currentUser?: CurrentUser;
     menu?: boolean;
 }
@@ -35,20 +34,19 @@ export default function AvatarDropdown(props: AvatarDropdownProps) {
         [setCurrentUser]
     );
 
-    // TODO: Fix translations
     const { menu } = props;
     const menuHeaderDropdown = (
         <Menu className={styles.menu} selectedKeys={[]} onClick={onMenuClick}>
             {menu && (
                 <Menu.Item key="center">
                     <UserOutlined />
-                    个人中心
+                    Personal center
                 </Menu.Item>
             )}
             {menu && (
                 <Menu.Item key="settings">
                     <SettingOutlined />
-                    个人设置
+                    Settings
                 </Menu.Item>
             )}
             {menu && <Menu.Divider />}
