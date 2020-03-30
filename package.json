@@ -11,7 +11,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "test": "npm run lint && npm run unittest",
+    "unittest": "jest",
     "lint": "npm run lint:source && npm run lint:tests",
     "lint:source": "eslint --ext .ts --ext .tsx src",
     "lint:tests": "eslint --ext .ts --ext .tsx test",
@@ -42,8 +43,13 @@
     "react-i18n-wrapper": "^18.1.0"
   },
   "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/jest": "^25.1.4",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
+    "babel-jest": "^25.2.4",
+    "babel-preset-gatsby": "^0.3.1",
+    "chai": "^4.2.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
@@ -52,10 +58,13 @@
     "gatsby-plugin-less": "^3.1.1",
     "gatsby-plugin-typescript": "^2.3.1",
     "husky": "^4.2.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.2.4",
     "less": "^3.11.1",
     "lint-staged": "^10.0.9",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1",
+    "react-test-renderer": "^16.13.1",
     "typescript": "^3.8.3"
   },
   "repository": {
