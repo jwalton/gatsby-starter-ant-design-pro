@@ -32,7 +32,7 @@ interface State {
     type?: string;
 }
 
-const Login: React.FC<{}> = props => {
+const Login: React.FC<{}> = () => {
     const [autoLogin, setAutoLogin] = useState(true);
     const [type, setType] = useState<string>('account');
 
